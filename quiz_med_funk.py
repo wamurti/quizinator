@@ -3,15 +3,18 @@
 quiz = {
     1 :{
         "fråga" : "Vilket lag är bäst i Stockholm?",
-        "svar" : "hammarby"
+        "svar" : "hammarby",
+        "alternativ": "hammarby, djurgården eller aik"
     },
     2 :{
         "fråga" : "Vad heter portugals huvudstad?",
-        "svar" : "lissabon"
+        "svar" : "lissabon",
+        "alternativ" : "lissabon, porto eller coimbra"
     },
     3 :{
         "fråga" : "Vad kallas en sälunge?",
-        "svar" : "kut"
+        "svar" : "kut",
+        "alternativ" : "kut, balle eller fjalle"
     }
 }
 
@@ -29,7 +32,8 @@ score = 0
 def quizinator(arg):
     global score # Hade bara kunnat skriva score = 0 här, men ville testa global
     for frågor in arg:
-        print(quiz[frågor]['fråga']+"\n"+"*"*20)
+        print(quiz[frågor]['fråga'])
+        print(f"{quiz[frågor]['alternativ']}...?")
         svaret = input("\nSvar : ")
         if svaret == quiz[frågor]['svar']:
             print("Rätt Svar!\n\n"+"*"*20)
