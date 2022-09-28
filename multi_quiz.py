@@ -1,20 +1,4 @@
-# Själva quizet, en dict med index. Index = siffrorna innan, tror jag..
-# Nu med MULTI-Q!
-
-quiz = {
-    1 :{
-        "fråga" : "Vilket lag är bäst i Stockholm?\n1: Hammarby \n2: Djurgården \n3: AIK",
-        "svar" : "1"
-    },
-    2 :{
-        "fråga" : "Vad heter portugals huvudstad?\n1: Paris \n2: Lissabon  \n3: Göran",
-        "svar" : "2"
-    },
-    3 :{
-        "fråga" : "Vad kallas en sälunge?\n1: Bob \n2: Valp \n3: Kut",
-        "svar" : "3"
-    }
-}
+from quiz import quiz
 
 # Poäng räkning. måste kanske ligga i loop?
 score = 0
@@ -31,6 +15,7 @@ stripes = "\n"+"=*"*10
 # for frågor in quiz:
        # print(quiz[frågor]['fråga'])
 
+
 # En funktion som går igenom vår dictionary med frågor
 # Det printar frågor och alternativ, sen kollar mot svar.
 # Stars/Stripes är bara utsmyckning
@@ -45,6 +30,7 @@ def quizinator(arg):
         else:
             print(f"FEL!\n{stars}")
     print(f"{stripes}\nDu fick {score}/3 rätt!{stripes}") # Printar score
+
 
 # En while loop som gör att man kan köra det flera gånger om man vill
 running = True # Condition för loopen, kan nog vara vad som helst
