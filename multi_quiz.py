@@ -1,4 +1,5 @@
-from quiz import quiz
+from questionnaire import quiz
+import random
 
 
 # Poäng räkning. måste kanske ligga i loop?
@@ -20,18 +21,22 @@ stripes = "\n"+"=*"*10
 # En funktion som går igenom vår dictionary med frågor
 # Det printar frågor och alternativ, sen kollar mot svar.
 # Stars/Stripes är bara utsmyckning
-key = random.choice(list[1,3])
+
+
+
 def quizinator(arg):
     global score
     for frågor in arg:
-        print(quiz[frågor[key]]['fråga']+f"{stars}")
+        random_fråga = random.randint(1,len(arg))
+        print(quiz[random_fråga]['fråga']+f"{stars}")
         svaret = input("\nSvar : ")
-        if svaret == quiz[frågor]['svar']:
+        if svaret == quiz[random_fråga]['svar']:
             print(f"Rätt Svar!\n{stars}")
             score +=1 # Varje rätt svar ger +1 till score variabeln
         else:
             print(f"FEL!\n{stars}")
-    print(f"{stripes}\nDu fick {score}/3 rätt!{stripes}") # Printar score
+    print(f"{stripes}\nDu fick {score}/{len(arg)} rätt!{stripes}") # Printar score
+
 
 
 # En while loop som gör att man kan köra det flera gånger om man vill
