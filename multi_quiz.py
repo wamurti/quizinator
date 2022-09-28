@@ -13,6 +13,11 @@ quiz = {
     3 :{
         "fråga" : "Vad kallas en sälunge?\n1: Bob \n2: Valp \n3: Kut",
         "svar" : "3"
+    },
+
+    4 :{ 
+        "fråga" : "Vart bor kungen?\n1: Drottningholm \n2: Hall  \n3: Akalla",
+        "svar:" : "1"
     }
 }
 
