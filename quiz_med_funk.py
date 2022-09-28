@@ -1,5 +1,6 @@
 
 from quiz import quiz
+import random
 # POÄNG räkning. måste kanske ligga i loop?
 score = 0
 # score += 1 , efter rätt svar
@@ -14,10 +15,11 @@ score = 0
 def quizinator(arg):
     global score # Hade bara kunnat skriva score = 0 här, men ville testa global
     for frågor in arg:
-        print(quiz[frågor]['fråga'])
-        print(f"{quiz[frågor]['alternativ']}...?")
+        random_fråga = random.randint(1,len(arg))
+        print(quiz[random_fråga]['fråga'])
+        print(f"{quiz[random_fråga]['alternativ']}...?")
         svaret = input("\nSvar : ")
-        if svaret == quiz[frågor]['svar']:
+        if svaret == quiz[random_fråga]['svar']:
             print("Rätt Svar!\n\n"+"*"*20)
             score +=1 # Varje rätt svar ger +1 till score variabeln
         else:
@@ -25,4 +27,5 @@ def quizinator(arg):
     print("\n"+"=*"*10+f"\nDu fick {score}/3 rätt!\n"+"=*"*10) # Printar score, och krimskrams
 
 # Kallar på funktionen, med argumentet quiz (dvs vår dictionary)
+
 quizinator(quiz)
