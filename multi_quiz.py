@@ -1,5 +1,7 @@
 # Själva quizet, en dict med index. Index = siffrorna innan, tror jag..
 # Nu med MULTI-Q!
+import random
+
 
 quiz = {
     1 :{
@@ -34,10 +36,11 @@ stripes = "\n"+"=*"*10
 # En funktion som går igenom vår dictionary med frågor
 # Det printar frågor och alternativ, sen kollar mot svar.
 # Stars/Stripes är bara utsmyckning
+key = random.choice(list[1,3])
 def quizinator(arg):
-    global score 
+    global score
     for frågor in arg:
-        print(quiz[frågor]['fråga']+f"{stars}")
+        print(quiz[frågor[key]]['fråga']+f"{stars}")
         svaret = input("\nSvar : ")
         if svaret == quiz[frågor]['svar']:
             print(f"Rätt Svar!\n{stars}")
