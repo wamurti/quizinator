@@ -6,7 +6,7 @@ quiz = {
     },
 
     2:{ "fråga" : "Hur skriver du kommentarer i python?\n1. //Det här är en kommentar. \n2. # Det här är en kommentar.\n3. /*Det här är en kommentar.*/",
-        "svar" : "3"
+        "svar" : "2"
     },
     
     3:{
