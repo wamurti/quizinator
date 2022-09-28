@@ -30,7 +30,7 @@ quiz = {
     },
 
     7:{ 
-        "fråga" : "Korrekt syntax för att få ut typen av en var eller obj i python?\n1. print(typeOf(x))\n2. print(type x)\3. print(type(x))",
+        "fråga" : "Korrekt syntax för att få ut typen av en var eller obj i python?\n1. print(typeOf(x))\n2. print(type x)\n3. print(type(x))",
         "svar" : "3"
     },
     8:{ 
@@ -50,15 +50,15 @@ quiz = {
         "svar" : "1"
         },
     12: { 
-        "fråga" : "Vilken metod kan göra en sträng till versaler?\n1. upperCase()\n2. toUpperCase\n3. upper",
+        "fråga" : "Vilken metod kan göra en sträng till versaler?\n1. upperCase()\n2. toUpperCase\n3. upper()",
         "svar" : "3"
         },
     13: { 
-        "fråga" : "Vilken metod kan byta ut delar av en sträng?\n1. replace()\n2. switch()\n3.repl",
+        "fråga" : "Vilken metod kan byta ut delar av en sträng?\n1. replace()\n2. switch()\n3. repl()",
         "svar" : "1"
         },
     14: { 
-        "fråga" : "Vilken operator används för multiplikation?\n1. \# \n2. * \n3. x",
+        "fråga" : "Vilken operator används för multiplikation?\n1. # \n2. * \n3. x",
         "svar" : "2"
         },
     15: { 
@@ -123,7 +123,7 @@ quiz = {
         },
     29: { 
         "fråga" : "Python är även en art ormar, vilket är dess korrekta latinska namn?\n1. Pythontus \n2. Pythonidae \n3. Pythus reptilus",
-        "svar" : "3"
+        "svar" : "2"
         },
     30: { 
         "fråga" : "Python är även en art ormar, på en kontinent är den invasiv, vilken?\n1. Asien \n2. Australien \n3. Amerika",
