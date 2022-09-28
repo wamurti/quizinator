@@ -23,19 +23,33 @@ stripes = "\n"+"=*"*10
 # Stars/Stripes är bara utsmyckning
 
 
-
-def quizinator(arg):
+def quizinator(arg,cap=0):
     global score
-    for frågor in arg:
-        random_fråga = random.randint(1,len(arg))
-        print(quiz[random_fråga]['fråga']+f"{stars}")
-        svaret = input("\nSvar : ")
-        if svaret == quiz[random_fråga]['svar']:
-            print(f"Rätt Svar!\n{stars}")
-            score +=1 # Varje rätt svar ger +1 till score variabeln
-        else:
-            print(f"FEL!\n{stars}")
-    print(f"{stripes}\nDu fick {score}/{len(arg)} rätt!{stripes}") # Printar score
+    if cap != 0: 
+        for _ in range(0,cap):
+            random_question = random.choice(arg)
+            print(random_question['fråga'])
+            svaret = input("\nSvar : ")
+            if svaret == random_question["svar"]:
+                print(f"Rätt Svar!\n{stars}")
+                score +=1
+            else:
+                print(f"FEL!\n{stars}")
+            print(f"{stripes}\nDu fick {score}/{len(arg)} rätt!{stripes}") # Printar score
+        
+    else:
+            
+        
+        for frågor in arg:
+            random_fråga = random.randint(1,len(arg))
+            print(quiz[random_fråga]['fråga']+f"{stars}")
+            svaret = input("\nSvar : ")
+            if svaret == quiz[random_fråga]['svar']:
+                print(f"Rätt Svar!\n{stars}")
+                score +=1 # Varje rätt svar ger +1 till score variabeln
+            else:
+                print(f"FEL!\n{stars}")
+        print(f"{stripes}\nDu fick {score}/{len(arg)} rätt!{stripes}") # Printar score
 
 
 
@@ -46,7 +60,8 @@ while running == True:
     print("\t-----QUIZTIME!-----")
     print("Svara på frågorna med [1], [2] eller [3]")
     # Kallar på funktionen, med argumentet quiz (dvs vår dictionary)
-    quizinator(quiz)
+    
+    quizinator(quiz,10)
     spela = input("\nVill du Quiza igen?! [J] / [N]?\n: ")
     if spela.lower() == "j":
         print(f"\nEn gång till!{stars}\n")  
