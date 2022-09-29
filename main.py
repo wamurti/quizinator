@@ -15,5 +15,5 @@ while running == True:
         print(f"\nEn gång till!{stars}\n")  
         score = 0 # Nollställer score för nästa spelande
     else:
-        print("Tack för du spelade!")
+        print("Tack för att du spelade!")
         running = False # Ändrar condition för while-loopen, programmet avslutas
