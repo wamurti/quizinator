@@ -35,7 +35,7 @@ def quizinator(arg,cap=0):
                 score +=1
             else:
                 print(f"FEL!\n{stars}")
-            print(f"{stripes}\nDu fick {score}/{len(arg)} rätt!{stripes}") # Printar score
+        print(f"{stripes}\nDu fick {score}/{cap} rätt!{stripes}") # Printar score
         
     else:
             
@@ -58,10 +58,11 @@ running = True # Condition för loopen, kan nog vara vad som helst
 while running == True:
     # Lite intro bara
     print("\t-----QUIZTIME!-----")
-    print("Svara på frågorna med [1], [2] eller [3]")
+    antal = int(input("Hur många frågor vill du ha? (1-30)\n: ")) # välj antal frågor
+    print("Svara på frågorna med [1], [2] eller [3]\n")
     # Kallar på funktionen, med argumentet quiz (dvs vår dictionary)
     
-    quizinator(quiz,10)
+    quizinator(quiz,antal)
     spela = input("\nVill du Quiza igen?! [J] / [N]?\n: ")
     if spela.lower() == "j":
         print(f"\nEn gång till!{stars}\n")  
