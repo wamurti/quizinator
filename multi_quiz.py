@@ -30,7 +30,7 @@ def quizinator(arg,cap=0):
     key_list = list(arg.keys()) # skapar lista av key och values från dict
     val_list = list(arg.values())
 
-    #Nedan block låter en ange hur många frågor man vill svara på + att frågorna är slumpade & kommer bara en gång förutsatt att man svarat rätt.
+    #Nedan if-block låter en ange hur många frågor man vill svara på + att frågorna är slumpade & kommer bara en gång förutsatt att man svarat rätt.
     if cap != 0: 
         for _ in range(0,cap): #Cap = hur många frågor vill du besvara
             random_question_index = random.randint(0,len(key_list)-1)
@@ -47,13 +47,12 @@ def quizinator(arg,cap=0):
             print(f"{stripes}\nDu fick {score}/{len(arg)} rätt!{stripes}") # Printar score
         
     else: 
-    #Nedan block kör igenom alla frågor utan randomisering
+    #Nedan else-block kör igenom alla frågor utan randomisering
             
         for frågor in arg:
-            random_fråga = random.randint(1,len(arg))
-            print(quiz[random_fråga]['fråga']+f"{stars}")
+            print(arg[frågor]['fråga']+f"{stars}")
             svaret = input("\nSvar : ")
-            if svaret == quiz[random_fråga]['svar']:
+            if svaret == arg[frågor]['svar']:
                 print(f"Rätt Svar!\n{stars}")
                 score +=1 # Varje rätt svar ger +1 till score variabeln
             else:
