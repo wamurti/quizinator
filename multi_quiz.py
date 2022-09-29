@@ -6,6 +6,7 @@ import random
 score = 0
 # score += 1 , efter ett rätt svar
 
+
 # Bara utsmyckning, för lite lättare text i funktionen
 stars = "\n"+"*"*20 
 stripes = "\n"+"=*"*10
@@ -25,14 +26,21 @@ stripes = "\n"+"=*"*10
 
 def quizinator(arg,cap=0):
     global score
+    
+    key_list = list(arg.keys()) # skapar lista av key och values från dict
+    val_list = list(arg.values())
+
     if cap != 0: 
-        for _ in range(0,cap):
-            random_question = random.choice(arg)
-            print(random_question['fråga'])
+        for _ in range(0,cap): #Cap = hur många frågor vill du besvara
+            random_question_index = random.randint(0,len(key_list)-1)
+            print(val_list[random_question_index]['fråga'])
             svaret = input("\nSvar : ")
-            if svaret == random_question["svar"]:
+            if svaret == val_list[random_question_index]["svar"]:
                 print(f"Rätt Svar!\n{stars}")
                 score +=1
+                val_list.pop(random_question_index) #Tar bort random_question_index från listor för att undvika att få samma fråga igen.
+                key_list.pop(random_question_index)
+                
             else:
                 print(f"FEL!\n{stars}")
             print(f"{stripes}\nDu fick {score}/{len(arg)} rätt!{stripes}") # Printar score
