@@ -20,7 +20,7 @@ quiz = {
     },
     
     5:{ 
-        "fråga" : "Vilket är korrekt filtillägg för python?\n1. .python3\n2. .py\3. .pyth", 
+        "fråga" : "Vilket är korrekt filtillägg för python?\n1. .python3\n2. .py\n3. .pyth", 
         "svar" : "2"
     },
 
