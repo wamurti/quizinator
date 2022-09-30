@@ -44,7 +44,7 @@ def quizinator(arg,cap=0):
                 
             else:
                 print(f"FEL!\n{stars}")
-            print(f"{stripes}\nDu fick {score}/{cap} rätt!{stripes}") # Printar score
+        print(f"{stripes}\nDu fick {score}/{cap} rätt!{stripes}") # Printar score
         
     else: 
     #Nedan else-block kör igenom alla frågor utan randomisering
